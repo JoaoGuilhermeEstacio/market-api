@@ -100,7 +100,7 @@ app.get("/users/:id", (req, res) => __awaiter(void 0, void 0, void 0, function* 
 app.get("/users", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield prisma_1.default.$connect();
-        let users = yield prisma_1.default.users.findMany();
+        let users = yield prisma_1.default.users.findRaw();
         return res.status(200).json({ data: users });
     }
     catch (error) {
