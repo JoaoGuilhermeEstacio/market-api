@@ -92,7 +92,7 @@ app.get("/users/:id", async (req: Request, res: Response) => {
 app.get("/users", async (req: Request, res: Response) => {
   try {
     await prisma.$connect()
-    let users = await prisma.users.findRaw()
+    let users = await prisma.users.findMany()
 
     return res.status(200).json({ data: users })
 
