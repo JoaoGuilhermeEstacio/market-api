@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
+  "engines": {"node": "18"},
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",
