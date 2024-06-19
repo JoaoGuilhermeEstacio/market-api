@@ -7,8 +7,8 @@
     "node": "18"
   },
   "scripts": {
-    "build": "npx tsc",
-    "start": "node dist/index.js",
+    "build": "npm uninstall tsc && npm uninstall typescript && npm install -D typescript && npm install typescript && npx tsc",
+    "start": "node src/index.js",
     "dev": "nodemon src/index.ts"
   },
   "keywords": [],
